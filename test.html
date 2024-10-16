@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #d1cbcb;
+        }
+
+        .container {
+            position: relative;
+            width: 375px;
+            /* Kích thước màn hình */
+            height: 812px;
+            /* Kích thước màn hình */
+            background-color: white;
+            overflow: hidden;
+            border-radius: 20px;
+            box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Phần hình ảnh */
+        .image-section {
+            position: relative;
+            width: 100%;
+            height: 60%;
+        }
+
+        .background-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+        }
+
+        /* Phần logo ở giữa màn hình */
+        .logo-container {
+            position: absolute;
+            top: 45%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 10px;
+            border-radius: 50px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .logo {
+            width: 60px;
+            height: 60px;
+        }
+
+        /* Phần văn bản chào mừng */
+        .text-section {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .text-section h1 {
+            font-size: 24px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .text-section p {
+            font-size: 16px;
+            color: #666;
+            margin-top: 10px;
+        }
+
+        /* Nút bấm Get Started */
+        .button-container {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .get-started-button {
+            background-color: #28a745;
+            color: white;
+            font-size: 18px;
+            font-weight: bold;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+        }
+
+        .container {
+            background-image: url(https://i.pinimg.com/564x/db/35/2e/db352eb4ab57142bfb33692649062e75.jpg);
+        }
+
+        .text-section h1,
+        .text-section p {
+            color: #f4f4f4;
+            text-shadow: 3px 3px 15px rgb(27, 27, 27);
+        }
+
+        .get-started-button:hover {
+            background-color: #218838;
+        }
+    </style>
+    <script>
+        function redirectToPage() {
+            window.location.href = "window2.html"; 
+        }
+        function redirectToPage() {
+            window.location.href = "window2.html"; 
+        }
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="image-section">
+        </div>
+
+        <div class="logo-container">
+            <img src="https://thietkelogo.vn/wp-content/uploads/2018/04/fb-icon.png" alt="Logo" class="logo">
+            <i class="fa-solid fa-strawberry" alt="Logo" class="logo"></i>
+        </div>
+
+        <div class="text-section">
+            <h1>Welcome</p>
+                <h1>to our store</h1>
+                <p>Get your groceries in as fast as one hour</p>
+        </div>
+
+        <div class="button-container">
+            <button class="get-started-button" onclick="redirectToPage()">Get Started</button>
+        </div>
+    </div>
+</body>
+
+</html>

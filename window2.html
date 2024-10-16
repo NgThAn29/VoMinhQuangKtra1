@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #d1cbcb;
+        }
+
+        .container {
+            position: relative;
+            width: 375px;
+            /* Kích thước màn hình */
+            height: 812px;
+            /* Kích thước màn hình */
+            background-color: rgb(241, 228, 228);
+            overflow: hidden;
+            border-radius: 20px;
+            box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Phần hình ảnh */
+        .image-section {
+            position: relative;
+            width: 100%;
+            height: 40%;
+        }
+
+        .background-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+        }
+
+        /* Phần logo ở giữa màn hình */
+
+
+        .logo {
+            width: 60px;
+            height: 60px;
+        }
+
+        /* Phần văn bản chào mừng */
+        .text-section {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .text-section h1 {
+            font-size: 24px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .text-section p {
+            font-size: 16px;
+            color: #666;
+            margin-top: 10px;
+        }
+        .button-container {
+            display: flex;
+            justify-content: center;
+            align-content: end;
+            margin-top: 0px;
+        }
+
+        .get-started-button {
+            background-color: #4268d1;
+            color: white;
+            font-size: 18px;
+            font-weight: initial;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+        }
+
+        .logo-container {
+            padding: 30px 50px;
+        }
+
+        .get-started-button:hover {
+            background-color: #217388;
+        }
+
+        .containerNumber {
+            text-align: center;
+        }
+
+
+        .phone-input-container {
+            position: relative;
+            display: inline-block;
+        }
+
+        .phone-input {
+            padding: 15px 20px;
+            border: 2px solid #ccc;
+            border-radius: 30px;
+            font-size: 16px;
+            width: 250px;
+        }
+
+        .phone-input::placeholder {
+            color: #aaa;
+        }
+
+
+        .country-code {
+            position: absolute;
+            left: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: white;
+            padding: 0 10px;
+            border-radius: 30px;
+            color: #666;
+            font-size: 16px;
+        }
+        .submit-button {
+            margin-top: 20px;
+            color: black;
+            text-decoration: none;
+        }
+
+        .submit-button:hover {
+            font-style: italic;
+        }
+
+        .ok {
+            background-color: #28a745;
+            color: white;
+            font-size: 18px;
+            font-weight: bold;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 50px;
+            margin-top: 10px;
+        }
+    </style>
+
+    <script>
+        function checkPhoneNumber() {
+            const phoneInput = document.getElementById('phoneInput').value;
+            const message = document.getElementById('message');
+            const validPhoneRegex = /^[0-9]{10,15}$/;
+
+            if (validPhoneRegex.test(phoneInput)) {
+                message.textContent = 'Số điện thoại hợp lệ!';
+                message.style.color = 'green';
+            } else {
+                message.textContent = 'Số điện thoại không hợp lệ!';
+                message.style.color = 'red';
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="image-section">
+            <img src="https://png.pngtree.com/png-vector/20240225/ourlarge/pngtree-cartoon-vegetables-characters-isolated-on-white-background-png-image_11875301.png"
+                alt="Delivery person" class="background-image">
+        </div>
+
+        <div class="logo-container">
+            <h2>Get your groceries</h2>
+            <h2>with nectar</h2>
+        </div>
+        <div class="div">
+            <div class="containerNumber">
+                <div class="input-container">
+                    <input type="tel" id="phoneInput" class="phone-input" placeholder="Nhập số điện thoại" />
+                    <div class="message" id="message"></div>
+                    <button onclick="checkPhoneNumber()" class="ok">OK</button>
+                </div>
+                <div class="div" style="margin-top: 20px;">
+                    <a href="#" class="submit-button">Or connect with social media</a>
+                </div>
+            </div>
+        </div>
+        <div class="div" style="padding-top: 30px;">
+            <div class="text-section">
+                <button class="get-started-button">
+                    <i class="fa-brands fa-google"></i>
+                    Continue with Google
+                </button>
+            </div>
+
+            <div class="button-container">
+                <button class="get-started-button">
+                    <i class="fa-brands fa-facebook-f"></i>
+                    Continue with Facebook
+                </button>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
